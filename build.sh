@@ -3,6 +3,7 @@ if [[ ! -d build ]]; then
   mkdir -p build
   cd build
   cmake -DMULTICORE=ON -DUSE_PT_COMPRESSION=OFF ..
+  # cmake -DUSE_PT_COMPRESSION=OFF ..
   cd ..
 fi
 cd build

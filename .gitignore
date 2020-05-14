@@ -1,2 +1,6 @@
+/.clangd/
+/MNT4753-input
+/MNT4753-parameters
+/MNT4753_preprocessed
 /build
 /compile_commands.json
