@@ -131,7 +131,11 @@ int main(int argc, const char * argv[])
       log2_d_4753 = 14;
       log2_d_6753 = 10;
     }
+    if (fastflag == "benchmark") {
+      log2_d_4753 = 18;
+      std::cerr << "MNT4753 size = 2^18" << std::endl;
+    }
   }
   generate_paramaters<mnt4753_pp>(log2_d_4753, "MNT4753-parameters", "MNT4753-input");
-  generate_paramaters<mnt6753_pp>(log2_d_6753, "MNT6753-parameters", "MNT6753-input");
+  // generate_paramaters<mnt6753_pp>(log2_d_6753, "MNT6753-parameters", "MNT6753-input");
 }

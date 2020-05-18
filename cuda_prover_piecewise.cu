@@ -168,6 +168,7 @@ void run_prover(
     print_time(t, "gpu launch");
 
     G1 *evaluation_At = B::multiexp_G1(B::input_w(inputs), B::params_A(params), m + 1);
+    print_time(t, "multiexp_G1");
     //G1 *evaluation_Bt1 = B::multiexp_G1(B::input_w(inputs), B::params_B1(params), m + 1);
     //G2 *evaluation_Bt2 = B::multiexp_G2(B::input_w(inputs), B::params_B2(params), m + 1);
 
@@ -176,6 +177,7 @@ void run_prover(
     auto H = B::params_H(params);
     auto coefficients_for_H =
         compute_H<B>(d, B::input_ca(inputs), B::input_cb(inputs), B::input_cc(inputs));
+    print_time(t, "compute_h");
     G1 *evaluation_Ht = B::multiexp_G1(coefficients_for_H, H, d);
 
     print_time(t, "cpu 1");
