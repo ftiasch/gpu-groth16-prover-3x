@@ -2,5 +2,6 @@
 /MNT4753-input
 /MNT4753-parameters
 /MNT4753_preprocessed
+/MNT4753-output_cuda
 /build
 /compile_commands.json
